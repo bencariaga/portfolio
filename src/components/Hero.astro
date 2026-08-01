@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<section id="about" class="flex flex-col items-center justify-center space-y-6 py-8 text-center">
+    <!-- Circular frame around image -->
+    <div class="relative h-40 w-40 overflow-hidden rounded-full border-4 border-blue-500 shadow-xl dark:border-blue-500">
+        <Image src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/benhur-cariaga.png`} width={160} height={160} class="h-full w-full object-cover" alt="Benhur Cariaga" loading="eager" />
+    </div>
+
+    <div class="space-y-4">
+        <h1 class="font-display text-5xl font-bold tracking-tight text-slate-900 md:text-7xl dark:text-white">Benhur Cariaga</h1>
+        <p class="font-display mx-auto max-w-2xl text-xl font-medium text-slate-700 md:text-2xl dark:text-slate-300">Aspiring (Not Yet Employed But Wishing To Be Employed)</p>
+    </div>
+
+    <!-- Hero Action Buttons -->
+    <div class="flex w-full flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
+        <a href="#projects" class="w-full transform rounded-full bg-blue-600 px-8 py-3 text-base font-bold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:opacity-90 active:scale-95 sm:w-auto"> Explore Projects </a>
+        <a href="#contact" class="w-full transform rounded-full bg-slate-200 px-8 py-3 text-base font-bold text-slate-800 transition-all hover:-translate-y-0.5 hover:opacity-90 active:scale-95 sm:w-auto dark:bg-slate-500 dark:text-white"> Contact Me </a>
+    </div>
+
+    <p class="mx-auto max-w-2xl pt-4 text-center text-base leading-relaxed text-slate-700 dark:text-slate-300">
+        <a href="https://en.wikipedia.org/wiki/Bachelor_of_Science_in_Information_Technology" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">BSIT</a> Graduate at <a href="https://www.htcgsc.edu.ph/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">Holy Trinity College of General Santos City</a>, currently building alone my dream software <a href="https://github.com/bencariaga/needle" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">Needle</a>, built with <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">Tailwind CSS</a>, <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">TypeScript</a>
+        , <a href="https://www.rust-lang.org/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">Rust</a>, <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">React</a>, and <a href="https://v2.tauri.app/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">Tauri</a>, with the visual simplicity of an <a href="https://en.wikipedia.org/wiki/Audio_editing_software" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">audio editor</a> and the featural sophistication of a <a href="https://en.wikipedia.org/wiki/Digital_audio_workstation" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">DAW</a>.
+    </p>
+</section>

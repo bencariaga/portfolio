@@ -1,0 +1,24 @@
+---
+import { interests } from '../data/portfolio';
+---
+
+<section id="interests" class="space-y-8">
+    <div class="space-y-3 text-center">
+        <h2 class="font-display text-3xl font-bold text-slate-900 md:text-4xl dark:text-white">The Skills That I Am Interested In Learning</h2>
+        <p class="text-slate-700 dark:text-slate-300">I know at the minimum level the following skills I want to have, but I am open for learning more with the employers, executives, mentors, coaches, etc.</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        {
+            interests.map((interest) => (
+                <div class="border-border-light dark:border-border-dark dark:bg-card-dark group flex flex-col overflow-hidden rounded-2xl border bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8">
+                    <div class="flex-grow space-y-3">
+                        <span class="text-xs font-bold tracking-wider text-blue-600 uppercase dark:text-blue-400">{interest.subtitle}</span>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{interest.title}</h3>
+                        <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">{interest.description}</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>

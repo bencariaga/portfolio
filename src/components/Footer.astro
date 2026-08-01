@@ -1,0 +1,19 @@
+---
+import { socialLinks } from '../data/portfolio';
+---
+
+<footer class="border-border-light dark:border-border-dark mt-16 border-t bg-slate-50 py-8 text-center text-xs text-slate-500 transition-colors dark:bg-slate-950">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 md:flex-row">
+        <span class="text-base">Built by Benhur Cariaga with <a href="https://astro.build" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400">Astro.js</a> & <a href="https://tailwindcss.com" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400">Tailwind CSS</a>.</span>
+
+        <div class="flex gap-4">
+            {
+                socialLinks.map((social) => (
+                    <a href={social.href} target="_blank" rel="noopener" class="hover:text-brand dark:hover:text-brand-dark text-2xl text-slate-500 transition-colors dark:text-slate-400" aria-label={social.name}>
+                        <i class={social.iconClass} />
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</footer>

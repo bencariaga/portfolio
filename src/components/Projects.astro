@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import { projects } from '../data/portfolio';
+---
+
+<section id="projects" class="space-y-12">
+    <div class="space-y-3 text-center">
+        <h2 class="font-display text-3xl font-bold text-slate-900 md:text-4xl dark:text-white">Featured Projects</h2>
+        <p class="text-base text-slate-700 dark:text-slate-300">Showcasing my capabilities and the value I bring to potential clients, employers, etc.</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8">
+        {
+            projects.map((proj) => (
+                <div class="border-border-light dark:border-border-dark dark:bg-card-dark group relative flex flex-col justify-between overflow-hidden rounded-2xl border bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md md:flex-row md:items-center md:gap-8 md:p-8">
+                    <div class="flex flex-1 flex-col justify-between space-y-4">
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <span class="rounded-2xl bg-slate-200 px-4 py-3 text-[14px] font-semibold tracking-wide text-slate-800 dark:bg-slate-800 dark:text-slate-200">{proj.techStack}</span>
+                            </div>
+
+                            <h3 class="text-2xl font-bold text-slate-900 transition-colors dark:text-white">{proj.title}</h3>
+
+                            <p class="text-base leading-relaxed font-medium text-slate-700 dark:text-slate-300">{proj.description}</p>
+                        </div>
+
+                        <div class="flex gap-4 pb-6">
+                            {proj.links.map((link) => (
+                                <a href={link.href} target="_blank" rel="noopener" class="rounded-full bg-slate-900 px-4 py-2 text-xs font-bold text-white transition-transform hover:scale-95 dark:bg-slate-800 dark:text-slate-200">
+                                    {link.text}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div class="aspect-video w-full flex-1 overflow-hidden shadow-sm">
+                        <Image src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}${proj.imageSrc}`} alt={proj.imageAlt} width={1600} height={900} class="h-full w-full object-contain" loading="lazy" />
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>
