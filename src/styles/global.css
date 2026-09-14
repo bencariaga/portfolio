@@ -1,0 +1,124 @@
+@import 'tailwindcss';
+@import './media-queries.css';
+
+@font-face {
+    font-family: 'Optimistic Display';
+    src: url('/portfolio/fonts/Optimistic_Display_W_Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Optimistic Display';
+    src: url('/portfolio/fonts/Optimistic_Display_W_SBd.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Optimistic Display';
+    src: url('/portfolio/fonts/Optimistic_Display_W_Md.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Optimistic Text';
+    src: url('/portfolio/fonts/Optimistic_Text_W_Rg.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Optimistic Text';
+    src: url('/portfolio/fonts/Optimistic_Text_W_Md.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Optimistic Text';
+    src: url('/portfolio/fonts/Optimistic_Text_W_Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('/portfolio/fonts/Source-Code-Pro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('/portfolio/fonts/Source-Code-Pro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --color-wash: #f6f7f9;
+    --color-wash-dark: #23272f;
+    --color-brand: #087ea4;
+    --color-brand-dark: #149eca;
+    --color-card-dark: #1c1b22;
+    --color-card-light: #ffffff;
+    --color-border-light: rgba(0, 0, 0, 0.08);
+    --color-border-dark: rgba(255, 255, 255, 0.08);
+
+    --font-display: 'Optimistic Display', 'Inter', system-ui, sans-serif;
+    --font-text: 'Optimistic Text', 'Inter', system-ui, sans-serif;
+    --font-mono: 'Source Code Pro', monospace;
+}
+
+html,
+body {
+    font-family: var(--font-text);
+    background-color: var(--color-wash);
+    color: var(--color-text-light);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+html.dark body {
+    background-color: var(--color-wash-dark);
+    color: var(--color-text-dark);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-wash);
+}
+html.dark ::-webkit-scrollbar-track {
+    background: var(--color-wash-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(8, 126, 164, 0.4);
+    border: 3px solid var(--color-wash);
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+html.dark ::-webkit-scrollbar-thumb {
+    background: rgba(20, 158, 202, 0.4);
+    border: 3px solid var(--color-wash-dark);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(8, 126, 164, 0.8);
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 158, 202, 0.8);
+}

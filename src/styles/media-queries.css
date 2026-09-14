@@ -1,0 +1,44 @@
+/* Layout Safety & Overflow Resets */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+pre,
+code {
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Custom Media Queries for Breakpoints */
+@media (max-width: 768px) {
+    /* Responsive overrides for smaller viewports */
+    section {
+        word-break: break-word;
+    }
+}
