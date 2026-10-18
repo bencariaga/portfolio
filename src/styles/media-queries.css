@@ -31,14 +31,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
     overflow-wrap: break-word;
-}
-
-/* Custom Media Queries for Breakpoints */
-@media (max-width: 768px) {
-    /* Responsive overrides for smaller viewports */
-    section {
-        word-break: break-word;
-    }
 }

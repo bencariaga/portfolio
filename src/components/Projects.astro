@@ -8,11 +8,11 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
 <section id="projects" aria-labelledby="projects-heading" class="scroll-mt-24 space-y-10">
     <div class="space-y-3 text-center sm:text-left">
         <div class="inline-flex items-center gap-2 text-xs font-bold tracking-wider text-sky-600 uppercase dark:text-sky-400">
-            <span class="h-1.5 w-1.5 rounded-full bg-sky-600 dark:bg-sky-400"></span>
+            <span class="h-2 w-2 rounded-full bg-sky-600 dark:bg-sky-400"></span>
             <span>Real-World Workflows</span>
         </div>
         <h2 id="projects-heading" class="font-display text-2xl font-bold text-slate-900 sm:text-3xl lg:text-4xl dark:text-white">Featured Projects</h2>
-        <p class="max-w-3xl text-base text-slate-600 dark:text-slate-300">Database-driven web applications solving practical institutional recordkeeping and municipal assistance challenges.</p>
+        <p class="max-w-3xl text-base text-slate-600 dark:text-slate-300">Database applications solving practical recordkeeping and status-tracking challenges.</p>
     </div>
 
     <div class="space-y-10">
@@ -32,12 +32,11 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
                                 <p class="text-sm leading-relaxed text-slate-600 sm:text-base dark:text-slate-300">{proj.description}</p>
 
                                 <div class="rounded-xl border border-slate-100 bg-slate-50/80 p-4 dark:border-slate-800/80 dark:bg-slate-800/50">
-                                    <h4 class="text-xs font-bold tracking-wider text-slate-700 uppercase dark:text-slate-300">My Role & Key Contributions</h4>
-                                    <p class="mt-1 text-xs font-medium text-sky-800 dark:text-sky-300">{proj.role}</p>
+                                    <h4 class="text-xs font-bold tracking-wider text-slate-700 uppercase dark:text-slate-300">My Key Contributions</h4>
                                     <ul class="mt-3 space-y-2 text-xs text-slate-600 sm:text-sm dark:text-slate-300">
                                         {proj.contributions.map((item) => (
-                                            <li class="flex items-start gap-2">
-                                                <i class="fa-solid fa-check mt-1 text-xs text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+                                            <li class="flex items-start gap-2.5">
+                                                <i class="fa-solid fa-check mt-1 text-sm text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
                                                 <span>{item}</span>
                                             </li>
                                         ))}
@@ -46,7 +45,7 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
 
                                 <div>
                                     <h4 class="text-xs font-bold tracking-wider text-slate-500 uppercase dark:text-slate-400">Verified Tech Stack</h4>
-                                    <div class="mt-2 flex flex-wrap gap-1.5 sm:gap-2">
+                                    <div class="mt-2 flex flex-wrap gap-2">
                                         {proj.techStack.map((tech) => (
                                             <span class="inline-flex items-center rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-2xs dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">{tech}</span>
                                         ))}
@@ -54,8 +53,8 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
                                 </div>
 
                                 {proj.confidentialNotice && (
-                                    <p class="flex items-start gap-2 text-xs text-slate-500 italic dark:text-slate-400">
-                                        <i class="fa-solid fa-shield-halved mt-0.5 text-slate-400" aria-hidden="true" />
+                                    <p class="flex items-start gap-2 text-xs leading-relaxed text-slate-500 italic dark:text-slate-400">
+                                        <i class="fa-solid fa-shield-halved mt-0.5 text-sm text-slate-400" aria-hidden="true" />
                                         <span>{proj.confidentialNotice}</span>
                                     </p>
                                 )}
@@ -63,18 +62,18 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
 
                             <div class="flex flex-wrap items-center gap-3 pt-2">
                                 {proj.links.map((link) => (
-                                    <a href={link.href} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-2xs transition-colors hover:bg-slate-50 hover:text-sky-600 focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 dark:hover:text-sky-400" aria-label={`${link.text} for ${proj.title} (opens in a new tab)`}>
-                                        {link.icon && <i class={link.icon} aria-hidden="true" />}
+                                    <a href={link.href} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-xs font-semibold text-slate-700 shadow-2xs transition-colors hover:bg-slate-50 hover:text-sky-600 focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 dark:hover:text-sky-400" aria-label={`${link.text} for ${proj.title} (opens in a new tab)`}>
+                                        {link.icon && <i class={`${link.icon} text-sm`} aria-hidden="true" />}
                                         <span>{link.text}</span>
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400" aria-hidden="true" />
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400" aria-hidden="true" />
                                     </a>
                                 ))}
                             </div>
                         </div>
 
                         <div class="flex flex-col justify-center lg:col-span-5">
-                            <div class="overflow-hidden rounded-xl border border-slate-200/90 bg-slate-100 shadow-inner transition-transform group-hover:scale-[1.01] dark:border-slate-700/80 dark:bg-slate-800">
-                                <Image src={`${baseUrl}${proj.imageSrc}`} alt={proj.imageAlt} width={1280} height={720} class="h-auto w-full object-cover" loading="lazy" />
+                            <div class="aspect-video w-full overflow-hidden rounded-xl border border-slate-200/90 bg-slate-100 shadow-inner transition-transform group-hover:scale-[1.01] dark:border-slate-700/80 dark:bg-slate-800">
+                                <img src={`${baseUrl}${proj.imageSrc}`} alt={proj.imageAlt} width="1280" height="720" class="h-full w-full object-cover" loading="lazy" style="aspect-ratio: 16 / 9;" />
                             </div>
                         </div>
                     </div>

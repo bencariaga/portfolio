@@ -100,66 +100,66 @@ export const featuredProjects: Project[] = [
     {
         id: 'htcgsc-gorms',
         title: 'HTCGSC Guidance Office Records Management System',
-        tagline: 'Administrative Workflow & Records Management Platform',
-        description: 'A centralized records management system developed for the Guidance and Testing Center (GTC) at Holy Trinity College of General Santos City. Designed to transition paper-based student guidance records into structured digital workflows with strict role-based access control.',
-        role: 'Full-Stack Developer (Database modeling, authentication workflows, core CRUD modules, Livewire state interactions, and responsive UI)',
-        contributions: ['Architected database schemas and relational models to securely track student guidance profiles, case notes, and testing records.', 'Implemented authentication security workflows with one-time password (OTP) verification for verified administrative access.', 'Built responsive reactive interfaces using Laravel Livewire, Alpine.js, and Tailwind CSS for seamless data entry without full page reloads.', 'Handled automated testing routines and deployment configurations targeting PostgreSQL on Render.'],
+        tagline: 'Student Guidance Records & Workflow System',
+        description: 'A centralized web application for the Guidance and Testing Center (GTC) at Holy Trinity College of General Santos City. Replaces physical paper filing with secure digital records and role-based staff access.',
+        role: 'Full-Stack Developer',
+        contributions: ['Designed PostgreSQL database tables to store student guidance files, counseling case notes, and testing records.', 'Implemented login authentication with one-time password (OTP) verification for secure administrative access.', 'Created responsive web screens using Laravel Livewire, Alpine.js, and Tailwind CSS so staff can save and update records without full page reloads.', 'Configured automated testing and deployment pipelines to Render with a managed PostgreSQL database.'],
         techStack: ['Laravel', 'Livewire', 'PHP', 'PostgreSQL', 'Tailwind CSS', 'Alpine.js', 'Render'],
         imageSrc: '/images/htcgsc-gorms.png',
         imageAlt: 'Screenshot of HTCGSC Guidance Office Records Management System dashboard',
         links: [{ text: 'Source Code', href: 'https://github.com/bencariaga/htcgsc-gorms', icon: 'fa-brands fa-github' }],
-        confidentialNotice: 'Source repository may be restricted to authorized academic personnel to safeguard institutional schemas and student data privacy.',
+        confidentialNotice: 'Its scope is restricted to authorized school staff to protect student records and institutional database.',
     },
     {
         id: 'amping-mamans',
         title: 'AMPING Medical Assistance Monitoring and Notification System',
-        tagline: 'Municipal Medical Assistance Tracking & Status Updates',
-        description: 'A public-service database application built to streamline records intake, document status monitoring, and applicant updates for the Auxiliaries and Medical Program for Individuals and Needy Generals (AMPING) in General Santos City.',
-        role: 'Full-Stack Developer (Application tracking logic, MySQL data schemas, administrative review screens, and notification flows)',
-        contributions: ['Engineered full CRUD operations for registering assistance applicants, categorizing medical support types, and maintaining intake audit histories.', 'Developed administrative dashboards enabling staff to quickly filter, evaluate, and update application statuses across review stages.', 'Constructed notification dispatch logic to alert beneficiaries on approval status and requirements.', 'Integrated responsive front-end components using Bootstrap and vanilla JavaScript paired with Laravel routing and Blade architecture.'],
+        tagline: 'Municipal Medical Assistance Tracker & Notifications',
+        description: 'A database web application built for the Auxiliaries and Medical Program for Individuals and Needy Generals (AMPING) in General Santos City. Helps staff process assistance requests and notify residents about their application status.',
+        role: 'Full-Stack Developer',
+        contributions: ['Created database tables and CRUD operations to register applicants, track medical assistance categories, and keep audit histories.', 'Built an administrative review screen where staff can search, evaluate, and update application progress across review stages.', 'Added automated notification logic to inform applicants when their documents are approved or need additional requirements.', 'Designed responsive, mobile-friendly forms and dashboards with Bootstrap and JavaScript connected to Laravel Blade templates.'],
         techStack: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
         imageSrc: '/images/amping-mamans.png',
         imageAlt: 'Screenshot of AMPING Medical Assistance Monitoring and Notification System interface',
         links: [{ text: 'Source Code', href: 'https://github.com/bencariaga/amping-mamans', icon: 'fa-brands fa-github' }],
-        confidentialNotice: 'Source code and applicant data are kept private in compliance with beneficiary privacy and municipal data management policies.',
+        confidentialNotice: 'Applicant data are kept private to protect citizen medical information and comply with privacy regulations.',
     },
 ];
 
 export const skillGroups: SkillGroup[] = [
     {
         category: 'Backend Development',
-        description: 'Core expertise in building structured, secure, and maintainable server-side web applications.',
-        skills: [{ name: 'PHP', highlight: true }, { name: 'Laravel', highlight: true }, { name: 'Livewire (TALL Stack)', highlight: true }, { name: 'Node.js' }, { name: 'Composer' }, { name: 'RESTful API Design' }, { name: 'Role-Based Authentication & OTP Workflows' }],
+        description: 'Server-side application logic, database integrations, and web services.',
+        skills: [{ name: 'PHP', highlight: true }, { name: 'Laravel', highlight: true }, { name: 'Livewire (TALL Stack)', highlight: true }, { name: 'Node.js' }, { name: 'Composer' }, { name: 'RESTful APIs' }, { name: 'Role-Based Authentication & OTP Workflows' }],
     },
     {
         category: 'Frontend Development',
-        description: 'Creating accessible, responsive, and mobile-friendly web interfaces.',
+        description: 'Responsive, accessible user interfaces for desktop and mobile browsers.',
         skills: [{ name: 'HTML5 (Semantic)' }, { name: 'CSS3 / Modern CSS' }, { name: 'JavaScript (ES6+)' }, { name: 'Tailwind CSS', highlight: true }, { name: 'Alpine.js', highlight: true }, { name: 'Bootstrap' }, { name: 'Astro' }],
     },
     {
         category: 'Databases & Data Modeling',
-        description: 'Relational data design, migrations, indexing, and transactional integrity.',
+        description: 'Relational database architecture, queries, indexing, and migrations.',
         skills: [{ name: 'MySQL', highlight: true }, { name: 'PostgreSQL', highlight: true }, { name: 'Eloquent ORM' }, { name: 'Database Migrations & Seeding' }, { name: 'SQL Query Optimization' }],
     },
     {
-        category: 'Dev Tools & Infrastructure',
-        description: 'Version control, packaging, continuous integration, and cloud hosting.',
-        skills: [{ name: 'Git & GitHub', highlight: true }, { name: 'NPM' }, { name: 'Render' }, { name: 'GitHub Pages' }, { name: 'Docker (Foundation)' }, { name: 'Nginx (Basics)' }],
+        category: 'Dev Tools & Hosting',
+        description: 'Version control, dependency management, and cloud deployments.',
+        skills: [{ name: 'Git & GitHub', highlight: true }, { name: 'NPM' }, { name: 'Render' }, { name: 'GitHub Pages' }, { name: 'Docker (Basics)' }, { name: 'Nginx (Basics)' }],
     },
     {
         category: 'Software Engineering Practices',
-        description: 'Systematic approaches to maintainable, reliable software delivery.',
-        skills: [{ name: 'CRUD Application Workflows' }, { name: 'Modular Code Architecture' }, { name: 'Automated Testing (PHPUnit / Pest basics)' }, { name: 'Systematic Debugging' }, { name: 'Web Accessibility (WCAG 2.2 AA standards)' }],
+        description: 'Practices for building reliable, maintainable web applications.',
+        skills: [{ name: 'CRUD Workflows' }, { name: 'Modular Architecture' }, { name: 'Automated Testing (PHPUnit / Pest)' }, { name: 'Systematic Debugging' }, { name: 'Web Accessibility (WCAG 2.2 AA)' }],
     },
 ];
 
 export const secondarySkills = [
-    { name: 'Rust', note: 'Active exploration for systems & desktop utilities' },
-    { name: 'Python', note: 'Scripting & automation basics' },
-    { name: 'C / C++', note: 'Foundational computer science & memory concepts' },
-    { name: 'TypeScript', note: 'Typed frontend & Node development' },
-    { name: 'React.js', note: 'Component-driven UI foundations' },
-    { name: 'Cybersecurity Practices', note: 'Defensive web security & application hardening' },
+    { name: 'Rust', note: 'Systems programming and desktop utility development' },
+    { name: 'Python', note: 'Scripting and task automation' },
+    { name: 'C / C++', note: 'Foundational computer science and memory management' },
+    { name: 'TypeScript', note: 'Type-safe frontend and Node development' },
+    { name: 'React.js', note: 'Component-based user interface foundations' },
+    { name: 'Cybersecurity Practices', note: 'Web application defense and secure coding' },
 ];
 
 export const education: EducationItem = {
@@ -168,7 +168,7 @@ export const education: EducationItem = {
     location: 'General Santos City, Philippines',
     period: '2022 – 2026',
     status: 'In Progress / Class of 2026',
-    highlights: ['Curriculum focus on database management systems, software engineering, and web development.', 'Developed real-world systems addressing institutional recordkeeping and municipal assistance challenges.', 'Active participant in regional computing and IT research symposiums.'],
+    highlights: ['Coursework in database systems, software engineering, and full-stack web development.', 'Created real-world web applications for municipal assistance and student recordkeeping.', 'Participated in regional IT conferences and college research symposiums.'],
 };
 
 export const credentials: CredentialItem[] = [
@@ -177,50 +177,50 @@ export const credentials: CredentialItem[] = [
         issuer: 'Technical Education and Skills Development Authority (TESDA)',
         date: 'September 2024',
         type: 'Certification',
-        description: 'National certification in computer hardware assembly, software installation, network configuration, and system maintenance.',
+        description: 'Philippine national certification covering computer assembly, operating system setup, network cabling, and hardware maintenance.',
     },
     {
         title: 'Tech Symposium',
         issuer: 'Holy Trinity College of General Santos City',
         date: 'May 2024',
         type: 'Symposium',
-        description: 'Academic presentation and demonstration of technological innovations and software projects.',
+        description: 'Live demonstration of computer system and application projects.',
     },
     {
         title: '11th PSITS Regional Convention',
-        issuer: 'Philippine Society of Information Technology Students (PSITS Region 12)',
+        issuer: 'Philippine Society of Information Technology Students Region 12',
         date: 'April 2023',
         type: 'Convention',
-        description: 'Regional gathering of IT students focusing on emerging industry trends, cloud tech, and developer practices.',
+        description: 'Regional conference on technology trends and emerging technologies.',
     },
     {
         title: 'Cybercrime Awareness Seminar',
         issuer: 'PNP Anti-Cybercrime Group (ACG PRO 12)',
         date: 'March 2023',
         type: 'Seminar',
-        description: 'Seminar covering cybersecurity hygiene, threat landscape awareness, and safe digital systems stewardship.',
+        description: 'Seminar on digital security best practices and cyber threat protection.',
     },
 ];
 
 export const secondaryInterests: Interest[] = [
     {
-        title: 'Low-Level Programming & Systems',
+        title: 'Low-Level Programming and Systems',
         subtitle: 'Exploration',
-        description: 'Deepening comprehension of memory layout, hardware boundaries, and performance optimization through languages like Rust and C/C++. Interested in how low-level efficiency powers resilient software.',
+        description: 'Studying memory layout, hardware efficiency, and performance with languages like Rust and C/C++ to better understand how computer systems work under the hood.',
     },
     {
-        title: 'Cybersecurity & Defensive Web Design',
+        title: 'Cybersecurity and Application Hardening',
         subtitle: 'Exploration',
-        description: 'Studying authentication protocols, input validation safeguards, and OWASP principles to ensure applications remain robust against common threat vectors and data leaks.',
+        description: 'Learning defensive security practices, secure authentication, and input validation to keep web applications safe against common vulnerabilities.',
     },
     {
-        title: 'Audio Software, Production & DJing',
+        title: 'Audio Software, Production and DJing',
         subtitle: 'Creative Pursuit',
-        description: 'Exploring the architecture of digital audio workstations (DAWs) with a focus on intuitive user interface design, alongside electronic music production and performance.',
+        description: 'Studying digital audio workstation (DAW) interfaces to design simpler music production tools, alongside composing electronic music.',
     },
     {
-        title: 'Songwriting & Creative Writing',
+        title: 'Writing Poems, Songs, Short Stories, and Novels',
         subtitle: 'Creative Pursuit',
-        description: 'Writing song lyrics and long-form fiction. A complementary creative discipline that sharpens storytelling, structured thinking, and empathy in communication.',
+        description: 'Writing lyrics and long-form fiction. A creative practice that helps improve structured communication, focus, and empathy.',
     },
 ];

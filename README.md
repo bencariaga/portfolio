@@ -18,14 +18,14 @@ Personal portfolio website for **Benhur L. Cariaga**, a Junior Full-Stack Web De
 ## 📁 Featured Projects Highlighted
 
 1. **[HTCGSC Guidance Office Records Management System](https://github.com/bencariaga/htcgsc-gorms)**
-   - *Tech Stack:* Laravel, Livewire, PHP, PostgreSQL, Tailwind CSS, Alpine.js, Render
-   - *Overview:* Centralized administrative records management platform designed for the Guidance and Testing Center (GTC) at Holy Trinity College of General Santos City. Transitions physical student guidance records into structured digital workflows with role-based access control and OTP authentication.
-   - *Status:* Academic system repository kept private to preserve student data privacy.
+    - _Tech Stack:_ Laravel, Livewire, PHP, PostgreSQL, Tailwind CSS, Alpine.js, Render
+    - _Overview:_ Centralized administrative records management platform designed for the Guidance and Testing Center (GTC) at Holy Trinity College of General Santos City. Transitions physical student guidance records into structured digital workflows with role-based access control and OTP authentication.
+    - _Status:_ Academic system repository kept private to preserve student data privacy.
 
 2. **[AMPING Medical Assistance Monitoring and Notification System](https://github.com/bencariaga/amping-mamans)**
-   - *Tech Stack:* Laravel, PHP, MySQL, Bootstrap, JavaScript
-   - *Overview:* Public-service records management and status-notification application for the Auxiliaries and Medical Program for Individuals and Needy Generals (AMPING) in General Santos City.
-   - *Status:* Beneficiary management repository protected for public health and privacy compliance.
+    - _Tech Stack:_ Laravel, PHP, MySQL, Bootstrap, JavaScript
+    - _Overview:_ Public-service records management and status-notification application for the Auxiliaries and Medical Program for Individuals and Needy Generals (AMPING) in General Santos City.
+    - _Status:_ Beneficiary management repository protected for public health and privacy compliance.
 
 ---
 
