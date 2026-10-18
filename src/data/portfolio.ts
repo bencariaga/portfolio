@@ -167,7 +167,7 @@ export const education: EducationItem = {
     institution: 'Holy Trinity College of General Santos City',
     location: 'General Santos City, Philippines',
     period: '2022 – 2026',
-    status: 'In Progress / Class of 2026',
+    status: 'In Progress | Class of 2026',
     highlights: ['Coursework in database systems, software engineering, and full-stack web development.', 'Created real-world web applications for municipal assistance and student recordkeeping.', 'Participated in regional IT conferences and college research symposiums.'],
 };
 
