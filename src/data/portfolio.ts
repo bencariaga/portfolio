@@ -18,68 +18,62 @@ export interface Interest {
 export interface ProjectLink {
     text: string;
     href: string;
+    icon?: string;
 }
 
 export interface Project {
+    id: string;
     title: string;
+    tagline: string;
     description: string;
-    techStack: string;
+    role: string;
+    contributions: string[];
+    techStack: string[];
     imageSrc: string;
     imageAlt: string;
     links: ProjectLink[];
+    confidentialNotice?: string;
 }
 
-export interface Experience {
-    role: string;
-    company: string;
-    companyUrl: string;
-    period: string;
-    logo: string;
-    responsibilities: string[];
-}
-
-export interface Skill {
+export interface SkillItem {
     name: string;
-    url: string;
-    status: 'current' | 'wanted';
+    badge?: string;
+    highlight?: boolean;
 }
 
-export interface SkillCategory {
+export interface SkillGroup {
     category: string;
-    skills: Skill[];
+    description: string;
+    skills: SkillItem[];
 }
 
-export interface Certification {
+export interface EducationItem {
+    degree: string;
+    institution: string;
+    period: string;
+    status: string;
+    location: string;
+    highlights?: string[];
+}
+
+export interface CredentialItem {
     title: string;
     issuer: string;
     date: string;
-    logo: string;
-}
-
-export interface Stat {
-    value: string;
-    label: string;
+    type: 'Certification' | 'Seminar' | 'Convention' | 'Symposium';
+    description?: string;
 }
 
 export const navLinks: NavLink[] = [
     { name: 'About', href: '#about' },
-    { name: 'Interests', href: '#interests' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Tech Stack', href: '#tech-stack' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
+    { name: 'Secondary Interests', href: '#interests' },
     { name: 'Contact', href: '#contact' },
 ];
 
 export const socialLinks: SocialLink[] = [
-    {
-        name: 'Email',
-        href: 'https://mail.google.com/mail/?view=cm&fs=1&to=bencariaga13@gmail.com',
-        iconClass: 'fa-solid fa-envelope',
-    },
-    {
-        name: 'Facebook',
-        href: 'https://www.facebook.com/blc.423',
-        iconClass: 'fa-brands fa-facebook',
-    },
     {
         name: 'GitHub',
         href: 'https://github.com/bencariaga',
@@ -89,156 +83,144 @@ export const socialLinks: SocialLink[] = [
         name: 'LinkedIn',
         href: 'https://www.linkedin.com/in/benhur-cariaga/',
         iconClass: 'fa-brands fa-linkedin',
-    } /*
-    {
-        name: 'Facebook Messenger',
-        href: 'https://www.facebook.com/messages/e2ee/t/1387250853134556',
-        iconClass: 'fa-brands fa-facebook-messenger',
     },
     {
-        name: 'Instagram',
-        href: 'https://www.instagram.com/nimus.yellow/',
-        iconClass: 'fa-brands fa-instagram',
+        name: 'Email',
+        href: 'mailto:bencariaga13@gmail.com',
+        iconClass: 'fa-solid fa-envelope',
     },
     {
-        name: 'Twitter / X',
-        href: 'https://x.com/bencariaga',
-        iconClass: 'fa-brands fa-twitter',
-    },
-    {
-        name: 'YouTube',
-        href: 'https://www.youtube.com/@benhurcariaga',
-        iconClass: 'fa-brands fa-youtube',
-    }, */,
-];
-
-export const interests: Interest[] = [
-    {
-        title: 'Web Development',
-        subtitle: '1st Priority',
-        description: 'This is where I am most familiar with. I have an experience creating a few locally hosted websites that heavily implement CRUD (Create, Read, Update, Delete) operations for over 2 years, written in languages, in both vanilla and several libraries and frameworks.',
-    },
-    {
-        title: 'Low-Level Programming',
-        subtitle: '2nd Priority',
-        description: 'This is where I want to learn next, because I want build the desktop app Needle, which needs attention in keeping consistently good performance with proper memory management. I want to learn how to properly manage the memory in a manual manner.',
-    },
-    {
-        title: 'Cybersecurity',
-        subtitle: '3rd Priority',
-        description: 'I learned some basics of it, and I applied it to the past websites I worked with, but I have yet to apply more of what I learned in future websites to create. I want to learn more about security on cyberspace, such as how to properly secure websites from possible future attacks.',
-    },
-    {
-        title: 'Music Production & DJing',
-        subtitle: '4th Priority',
-        description: 'The first three priorities would help me build, maintain, and use Needle for making and playing with beats. Someone might ask me: "Why don\'t you just use any existing DAW, something like Ableton or FL Studio?" My answer? They are visually overwhelming and difficult to use. I want to create a DAW to solve these problems by making the user interface of the DAW easier to read, while keeping what features that makes Needle a DAW.',
-    },
-    {
-        title: 'Songwriting',
-        subtitle: '5th Priority',
-        description: 'On top of wanting to create the vocal and instrumental parts of songs with my DAW desktop app Needle, I also want to write lyrics into these songs. I want to create songs that could potentially make people feel the same or similar emotions I would feel when I would first listen to them.',
-    },
-    {
-        title: 'Novel Writing',
-        subtitle: '6th Priority',
-        description: 'Aside from writing code and songs, I also would like to write novels that reflect certain chapters in my life. I look forward for the novels I would write and publish in the future to make a difference on other people who might or might not have life experiences similar to mine, as well as in my home country and the world.',
+        name: 'Facebook',
+        href: 'https://www.facebook.com/blc.423',
+        iconClass: 'fa-brands fa-facebook',
     },
 ];
 
-export const projects: Project[] = [
+export const featuredProjects: Project[] = [
     {
-        title: 'AMPING Medical Assistance Monitoring and Notification System',
-        description: 'A computer system for monitoring digital document data and notifying applicants in medical assistance of the Auxiliaries and Medical Program for Individuals and Needy Generals (AMPING).',
-        techStack: 'Laravel, MySQL, Bootstrap',
-        imageSrc: '/images/amping-mamans.png',
-        imageAlt: 'AMPING Medical Assistance Monitoring and Notification System',
-        links: [{ text: 'Source Code', href: 'https://github.com/bencariaga/amping-mamans' }],
-    },
-    {
+        id: 'htcgsc-gorms',
         title: 'HTCGSC Guidance Office Records Management System',
-        description: 'A computer system designed for monitoring data of the Guidance and Testing Center (GTC) of the school and for notifying GTC employees and Holy Trinity College of General Santos City (HTCGSC) students.',
-        techStack: 'Laravel, Livewire, PostgreSQL, Render, Alpine.js, Tailwind CSS',
+        tagline: 'Administrative Workflow & Records Management Platform',
+        description: 'A centralized records management system developed for the Guidance and Testing Center (GTC) at Holy Trinity College of General Santos City. Designed to transition paper-based student guidance records into structured digital workflows with strict role-based access control.',
+        role: 'Full-Stack Developer (Database modeling, authentication workflows, core CRUD modules, Livewire state interactions, and responsive UI)',
+        contributions: ['Architected database schemas and relational models to securely track student guidance profiles, case notes, and testing records.', 'Implemented authentication security workflows with one-time password (OTP) verification for verified administrative access.', 'Built responsive reactive interfaces using Laravel Livewire, Alpine.js, and Tailwind CSS for seamless data entry without full page reloads.', 'Handled automated testing routines and deployment configurations targeting PostgreSQL on Render.'],
+        techStack: ['Laravel', 'Livewire', 'PHP', 'PostgreSQL', 'Tailwind CSS', 'Alpine.js', 'Render'],
         imageSrc: '/images/htcgsc-gorms.png',
-        imageAlt: 'HTCGSC Guidance Office Records Management System',
-        links: [{ text: 'Source Code', href: 'https://github.com/bencariaga/htcgsc-gorms' }],
-    } /*
+        imageAlt: 'Screenshot of HTCGSC Guidance Office Records Management System dashboard',
+        links: [{ text: 'Source Code', href: 'https://github.com/bencariaga/htcgsc-gorms', icon: 'fa-brands fa-github' }],
+        confidentialNotice: 'Source repository may be restricted to authorized academic personnel to safeguard institutional schemas and student data privacy.',
+    },
     {
-        title: 'Needle DAW',
-        description: 'A desktop app with the visual simplicity of an audio editor (like Audacity) and the featural sophistication of a DAW.',
-        techStack: 'Tailwind CSS, TypeScript, React, Rust, Tauri',
-        imageSrc: '/images/needle-daw.png',
-        imageAlt: 'Needle Digital Audio Workstation',
-        links: [{ text: 'Source Code', href: 'https://github.com/bencariaga/needle' }],
-    }, */,
+        id: 'amping-mamans',
+        title: 'AMPING Medical Assistance Monitoring and Notification System',
+        tagline: 'Municipal Medical Assistance Tracking & Status Updates',
+        description: 'A public-service database application built to streamline records intake, document status monitoring, and applicant updates for the Auxiliaries and Medical Program for Individuals and Needy Generals (AMPING) in General Santos City.',
+        role: 'Full-Stack Developer (Application tracking logic, MySQL data schemas, administrative review screens, and notification flows)',
+        contributions: ['Engineered full CRUD operations for registering assistance applicants, categorizing medical support types, and maintaining intake audit histories.', 'Developed administrative dashboards enabling staff to quickly filter, evaluate, and update application statuses across review stages.', 'Constructed notification dispatch logic to alert beneficiaries on approval status and requirements.', 'Integrated responsive front-end components using Bootstrap and vanilla JavaScript paired with Laravel routing and Blade architecture.'],
+        techStack: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+        imageSrc: '/images/amping-mamans.png',
+        imageAlt: 'Screenshot of AMPING Medical Assistance Monitoring and Notification System interface',
+        links: [{ text: 'Source Code', href: 'https://github.com/bencariaga/amping-mamans', icon: 'fa-brands fa-github' }],
+        confidentialNotice: 'Source code and applicant data are kept private in compliance with beneficiary privacy and municipal data management policies.',
+    },
 ];
 
-export const skills: SkillCategory[] = [
+export const skillGroups: SkillGroup[] = [
     {
-        category: 'Languages',
-        skills: [
-            { name: 'HTML', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML', status: 'current' },
-            { name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS', status: 'current' },
-            { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', status: 'current' },
-            { name: 'TypeScript', url: 'https://www.typescriptlang.org/', status: 'current' },
-            { name: 'PHP', url: 'https://www.php.net/', status: 'current' },
-            { name: 'SQL', url: 'https://developer.mozilla.org/en-US/docs/Glossary/SQL', status: 'current' },
-            { name: 'Rust', url: 'https://www.rust-lang.org/', status: 'wanted' },
-            { name: 'Python', url: 'https://www.python.org/', status: 'wanted' },
-            { name: 'C', url: 'https://www.c-language.org/', status: 'wanted' },
-            { name: 'C++', url: 'https://isocpp.org/', status: 'wanted' },
-        ],
+        category: 'Backend Development',
+        description: 'Core expertise in building structured, secure, and maintainable server-side web applications.',
+        skills: [{ name: 'PHP', highlight: true }, { name: 'Laravel', highlight: true }, { name: 'Livewire (TALL Stack)', highlight: true }, { name: 'Node.js' }, { name: 'Composer' }, { name: 'RESTful API Design' }, { name: 'Role-Based Authentication & OTP Workflows' }],
     },
     {
-        category: 'Frontend',
-        skills: [
-            { name: 'Bootstrap', url: 'https://getbootstrap.com/', status: 'current' },
-            { name: 'Tailwind CSS', url: 'https://tailwindcss.com/', status: 'current' },
-            { name: 'Astro.js', url: 'https://astro.build/', status: 'current' },
-            { name: 'Alpine.js', url: 'https://alpinejs.dev/', status: 'current' },
-            { name: 'React.js', url: 'https://react.dev/', status: 'current' },
-            { name: 'Sass', url: 'https://sass-lang.com/', status: 'wanted' },
-            { name: 'Svelte.js', url: 'https://svelte.dev/', status: 'wanted' },
-            { name: 'Solid.js', url: 'https://solidjs.com/', status: 'wanted' },
-        ],
+        category: 'Frontend Development',
+        description: 'Creating accessible, responsive, and mobile-friendly web interfaces.',
+        skills: [{ name: 'HTML5 (Semantic)' }, { name: 'CSS3 / Modern CSS' }, { name: 'JavaScript (ES6+)' }, { name: 'Tailwind CSS', highlight: true }, { name: 'Alpine.js', highlight: true }, { name: 'Bootstrap' }, { name: 'Astro' }],
     },
     {
-        category: 'Backend',
-        skills: [
-            { name: 'Node.js', url: 'https://nodejs.org/en', status: 'current' },
-            { name: 'NPM', url: 'https://www.npmjs.com/', status: 'current' },
-            { name: 'Composer', url: 'https://getcomposer.org/', status: 'current' },
-            { name: 'Git', url: 'https://git-scm.com/', status: 'current' },
-            { name: 'Laravel', url: 'https://laravel.com/', status: 'current' },
-            { name: 'Livewire', url: 'https://livewire.laravel.com/', status: 'current' },
-            { name: 'Cargo', url: 'https://doc.rust-lang.org/cargo', status: 'wanted' },
-            { name: 'Tauri', url: 'https://v2.tauri.app/', status: 'wanted' },
-            { name: 'PIP', url: 'https://www.python.org/pip/', status: 'wanted' },
-            { name: 'CMake', url: 'https://cmake.org/', status: 'wanted' },
-        ],
+        category: 'Databases & Data Modeling',
+        description: 'Relational data design, migrations, indexing, and transactional integrity.',
+        skills: [{ name: 'MySQL', highlight: true }, { name: 'PostgreSQL', highlight: true }, { name: 'Eloquent ORM' }, { name: 'Database Migrations & Seeding' }, { name: 'SQL Query Optimization' }],
     },
     {
-        category: 'Databases',
-        skills: [
-            { name: 'MySQL', url: 'https://www.mysql.com/', status: 'current' },
-            { name: 'PostgreSQL', url: 'https://www.postgresql.org/', status: 'wanted' },
-            { name: 'SQLite', url: 'https://www.sqlite.org/', status: 'wanted' },
-            { name: 'Redis', url: 'https://redis.io/', status: 'wanted' },
-        ],
+        category: 'Dev Tools & Infrastructure',
+        description: 'Version control, packaging, continuous integration, and cloud hosting.',
+        skills: [{ name: 'Git & GitHub', highlight: true }, { name: 'NPM' }, { name: 'Render' }, { name: 'GitHub Pages' }, { name: 'Docker (Foundation)' }, { name: 'Nginx (Basics)' }],
     },
     {
-        category: 'Development Operations',
-        skills: [
-            { name: 'GitHub', url: 'https://github.com/', status: 'current' },
-            { name: 'Docker', url: 'https://www.docker.com/', status: 'wanted' },
-            { name: 'Kubernetes', url: 'https://kubernetes.io/', status: 'wanted' },
-        ],
+        category: 'Software Engineering Practices',
+        description: 'Systematic approaches to maintainable, reliable software delivery.',
+        skills: [{ name: 'CRUD Application Workflows' }, { name: 'Modular Code Architecture' }, { name: 'Automated Testing (PHPUnit / Pest basics)' }, { name: 'Systematic Debugging' }, { name: 'Web Accessibility (WCAG 2.2 AA standards)' }],
+    },
+];
+
+export const secondarySkills = [
+    { name: 'Rust', note: 'Active exploration for systems & desktop utilities' },
+    { name: 'Python', note: 'Scripting & automation basics' },
+    { name: 'C / C++', note: 'Foundational computer science & memory concepts' },
+    { name: 'TypeScript', note: 'Typed frontend & Node development' },
+    { name: 'React.js', note: 'Component-driven UI foundations' },
+    { name: 'Cybersecurity Practices', note: 'Defensive web security & application hardening' },
+];
+
+export const education: EducationItem = {
+    degree: 'Bachelor of Science in Information Technology',
+    institution: 'Holy Trinity College of General Santos City',
+    location: 'General Santos City, Philippines',
+    period: '2022 – 2026',
+    status: 'In Progress / Class of 2026',
+    highlights: ['Curriculum focus on database management systems, software engineering, and web development.', 'Developed real-world systems addressing institutional recordkeeping and municipal assistance challenges.', 'Active participant in regional computing and IT research symposiums.'],
+};
+
+export const credentials: CredentialItem[] = [
+    {
+        title: 'Computer Systems Servicing NC II',
+        issuer: 'Technical Education and Skills Development Authority (TESDA)',
+        date: 'September 2024',
+        type: 'Certification',
+        description: 'National certification in computer hardware assembly, software installation, network configuration, and system maintenance.',
     },
     {
-        category: 'Cloud',
-        skills: [
-            { name: 'GitHub Pages', url: 'https://docs.github.com/en/pages', status: 'current' },
-            { name: 'Render', url: 'https://render.com/', status: 'wanted' },
-            { name: 'Netlify', url: 'https://www.netlify.com/', status: 'wanted' },
-        ],
+        title: 'Tech Symposium',
+        issuer: 'Holy Trinity College of General Santos City',
+        date: 'May 2024',
+        type: 'Symposium',
+        description: 'Academic presentation and demonstration of technological innovations and software projects.',
+    },
+    {
+        title: '11th PSITS Regional Convention',
+        issuer: 'Philippine Society of Information Technology Students (PSITS Region 12)',
+        date: 'April 2023',
+        type: 'Convention',
+        description: 'Regional gathering of IT students focusing on emerging industry trends, cloud tech, and developer practices.',
+    },
+    {
+        title: 'Cybercrime Awareness Seminar',
+        issuer: 'PNP Anti-Cybercrime Group (ACG PRO 12)',
+        date: 'March 2023',
+        type: 'Seminar',
+        description: 'Seminar covering cybersecurity hygiene, threat landscape awareness, and safe digital systems stewardship.',
+    },
+];
+
+export const secondaryInterests: Interest[] = [
+    {
+        title: 'Low-Level Programming & Systems',
+        subtitle: 'Exploration',
+        description: 'Deepening comprehension of memory layout, hardware boundaries, and performance optimization through languages like Rust and C/C++. Interested in how low-level efficiency powers resilient software.',
+    },
+    {
+        title: 'Cybersecurity & Defensive Web Design',
+        subtitle: 'Exploration',
+        description: 'Studying authentication protocols, input validation safeguards, and OWASP principles to ensure applications remain robust against common threat vectors and data leaks.',
+    },
+    {
+        title: 'Audio Software, Production & DJing',
+        subtitle: 'Creative Pursuit',
+        description: 'Exploring the architecture of digital audio workstations (DAWs) with a focus on intuitive user interface design, alongside electronic music production and performance.',
+    },
+    {
+        title: 'Songwriting & Creative Writing',
+        subtitle: 'Creative Pursuit',
+        description: 'Writing song lyrics and long-form fiction. A complementary creative discipline that sharpens storytelling, structured thinking, and empathy in communication.',
     },
 ];

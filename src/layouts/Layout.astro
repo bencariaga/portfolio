@@ -1,5 +1,14 @@
 ---
 import '../styles/global.css';
+
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const { title = 'Benhur L. Cariaga | Junior Full-Stack Web Developer (PHP / Laravel / TALL Stack)', description = 'Portfolio of Benhur L. Cariaga, a Junior Full-Stack Web Developer specializing in PHP, Laravel, PostgreSQL, MySQL, Livewire, and modern web applications based in General Santos City, Philippines.' } = Astro.props;
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!doctype html>
@@ -8,37 +17,45 @@ import '../styles/global.css';
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.svg`} />
-        <link rel="icon" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.ico`} />
+        <link rel="icon" type="image/svg+xml" href={`${baseUrl}/favicon.svg`} />
+        <link rel="icon" href={`${baseUrl}/favicon.ico`} />
 
         <meta name="generator" content={Astro.generator} />
 
-        <title>Benhur Cariaga | Portfolio</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="author" content="Benhur L. Cariaga" />
+        <meta name="keywords" content="Benhur Cariaga, Junior Web Developer, Full-Stack Developer, PHP, Laravel, Livewire, TALL Stack, MySQL, PostgreSQL, General Santos City, Philippines" />
 
-        <meta name="description" content="Portfolio of Benhur Cariaga, a software engineer specializing in full-stack development, cloud infrastructure, and automation." />
-        <meta name="author" content="Benhur Cariaga" />
-        <meta name="keywords" content="software engineer,full-stack,portfolio,developer" />
+        <!-- Open Graph / Meta -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bencariaga.github.io/portfolio/" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={`${baseUrl}/images/benhur-cariaga.png`} />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <script is:inline>
-            // Inline theme check to prevent light/dark flash
+            // Inline theme check to prevent flash of wrong theme
             (function () {
                 try {
-                    const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-                    if (theme === 'dark') {
+                    const storedTheme = localStorage.getItem('theme');
+                    if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                         document.documentElement.classList.add('dark');
                     } else {
                         document.documentElement.classList.remove('dark');
                     }
                 } catch (e) {
-                    console.error(e);
+                    console.error('Theme detection error:', e);
                 }
             })();
         </script>
     </head>
 
-    <body class="bg-wash dark:bg-wash-dark selection:bg-brand/30 selection:text-brand dark:selection:bg-brand-dark/30 dark:selection:text-brand-dark text-slate-900 antialiased dark:text-slate-100">
+    <body class="bg-wash text-slate-800 antialiased transition-colors duration-200 dark:bg-slate-950 dark:text-slate-100">
+        <!-- Skip link for keyboard accessibility -->
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-sky-600 focus:px-4 focus:py-2 focus:text-white focus:shadow-lg focus:outline-none"> Skip to main content </a>
         <slot />
     </body>
 </html>

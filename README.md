@@ -1,129 +1,124 @@
-# My Portfolio
+# Benhur L. Cariaga — Developer Portfolio
 
-## **Hi, I am Benhur Cariaga!**
+[![Deploy to GitHub Pages](https://github.com/bencariaga/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/bencariaga/portfolio/actions/workflows/deploy.yml)
+[![Live Site](https://img.shields.io/badge/Live%20Site-bencariaga.github.io%2Fportfolio-blue.svg)](https://bencariaga.github.io/portfolio/)
 
-> **Aspiring (Not Yet Employed But Wishing To Be Employed)**  
-
-**[About](#my-portfolio)** | **[Interests](#the-skills-i-am-interested-in-learning)** | **[Projects](#featured-projects)** | **[Tech Stack](#tech-stack)** | **[Contact Me](#get-in-touch)**
-
-**[BSIT](https://en.wikipedia.org/wiki/Bachelor_of_Science_in_Information_Technology)** Graduate at **[Holy Trinity College of General Santos City](https://htcgsc.edu.ph/)**.
+Personal portfolio website for **Benhur L. Cariaga**, a Junior Full-Stack Web Developer based in General Santos City, Philippines. The portfolio highlights practical experience building database-driven web applications with PHP, Laravel, PostgreSQL, MySQL, and the TALL stack.
 
 ---
 
-## The Skills I Am Interested In Learning
+## 🌟 Core Focus & Professional Identity
 
-I know at the minimum level the following skills I want to have, but I am open for learning more with the employers, executives, mentors, coaches, etc.
-
-1. **1st Priority: Web Development**  
-   This is where I am most familiar with. I have an experience creating a few locally hosted websites that heavily implement CRUD (Create, Read, Update, Delete) operations for over 2 years, written in languages, in both vanilla and several libraries and frameworks.
-
-2. **2nd Priority: Low-Level Programming**  
-   This is where I want to learn next, because I want build the desktop app Needle, which needs attention in keeping consistently good performance with proper memory management. I want to learn how to properly manage the memory in a manual manner.
-
-3. **3rd Priority: Cybersecurity**  
-   I learned some basics of it, and I applied it to the past websites I worked with, but I have yet to apply more of what I learned in future websites to create. I want to learn more about security on cyberspace, such as how to properly secure websites from possible future attacks.
-
-4. **4th Priority: Music Production & DJing**  
-   The first three priorities would help me build, maintain, and use Needle for making and playing with beats. Someone might ask me: "Why don't you just use any existing DAW, something like Ableton or FL Studio?" My answer? They are visually overwhelming and difficult to use. I want to create a DAW to solve these problems by making the user interface of the DAW easier to read, while keeping what features that makes Needle a DAW.
-
-5. **5th Priority: Songwriting**  
-   On top of wanting to create the vocal and instrumental parts of songs with my DAW desktop app Needle, I also want to write lyrics into these songs. I want to create songs that could potentially make people feel the same or similar emotions I would feel when I would first listen to them.
-
-6. **6th Priority: Novel Writing**  
-   Aside from writing code and songs, I also would like to write novels that reflect certain chapters in my life. I look forward for the novels I would write and publish in the future to make a difference on other people who might or might not have life experiences similar to mine, as well as in my home country and the world.
+- **Role:** Junior Full-Stack Web Developer
+- **Primary Stack:** PHP | Laravel | Livewire (TALL Stack) | PostgreSQL | MySQL | Tailwind CSS | Alpine.js
+- **Specialization:** Database-driven management systems, relational schema design, role-based authentication with OTP verification, and responsive user interfaces.
 
 ---
 
-## Featured Projects
+## 📁 Featured Projects Highlighted
 
-Showcasing my capabilities and the value I bring to potential clients and employers.
+1. **[HTCGSC Guidance Office Records Management System](https://github.com/bencariaga/htcgsc-gorms)**
+   - *Tech Stack:* Laravel, Livewire, PHP, PostgreSQL, Tailwind CSS, Alpine.js, Render
+   - *Overview:* Centralized administrative records management platform designed for the Guidance and Testing Center (GTC) at Holy Trinity College of General Santos City. Transitions physical student guidance records into structured digital workflows with role-based access control and OTP authentication.
+   - *Status:* Academic system repository kept private to preserve student data privacy.
 
-### AMPING Medical Assistance Monitoring and Notification System
-
-* **Tech Stack:** Laravel | MySQL | Bootstrap
-* **Description:** A computer system for monitoring digital document data and notifying applicants in medical assistance of the Auxiliaries and Medical Program for Individuals and Needy Generals (AMPING).
-* **Link:** [Source Code](https://github.com/bencariaga/amping-mamans)
-
-### HTCGSC Guidance Office Records Management System
-
-* **Tech Stack:** Laravel | MySQL | Alpine.js | Tailwind CSS
-* **Description:** A computer system designed for monitoring data of the Guidance and Testing Center (GTC) of the school and for notifying GTC employees and Holy Trinity College of General Santos City (HTCGSC) students.
-* **Link:** [Source Code](https://github.com/bencariaga/htcgsc-gorms)
+2. **[AMPING Medical Assistance Monitoring and Notification System](https://github.com/bencariaga/amping-mamans)**
+   - *Tech Stack:* Laravel, PHP, MySQL, Bootstrap, JavaScript
+   - *Overview:* Public-service records management and status-notification application for the Auxiliaries and Medical Program for Individuals and Needy Generals (AMPING) in General Santos City.
+   - *Status:* Beneficiary management repository protected for public health and privacy compliance.
 
 ---
 
-## Tech Stack
+## 🛠️ Architecture & Tech Stack
 
-Tools *I started to learn* and **I want to learn**.
+- **Framework:** [Astro v7](https://astro.build/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) with custom `@theme` tokens
+- **Typography:** Local `Optimistic Display` & `Optimistic Text` web fonts with standard fallback stacks
+- **Icons:** Font Awesome 6
+- **Hosting / CI/CD:** GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`)
 
-### Programming Languages
+### Key Features
 
-* *[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)*
-* *[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)*
-* *[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)*
-* *[TypeScript](https://www.typescriptlang.org/)*
-* *[PHP](https://www.php.net/)*
-* *[SQL](https://developer.mozilla.org/en-US/docs/Glossary/SQL)*
-* **[Rust](https://www.rust-lang.org/)**
-* **[Python](https://www.python.org/)**
-* **[C](https://www.c-language.org)**
-* **[C++](https://www.isocpp.org)**
-
-### Frontend
-
-* *[Bootstrap](https://getbootstrap.com)*
-* *[Tailwind CSS](https://tailwindcss.com)*
-* *[Astro.js](https://astro.build/)*
-* *[Alpine.js](https://alpinejs.dev/)*
-* *[React.js](https://react.dev/)*
-* **[Sass](https://sass-lang.com/)**
-* **[Svelte.js](https://svelte.dev/)**
-* **[Solid.js](https://solidjs.com/)**
-
-### Backend
-
-* *[Node.js](https://nodejs.org/)*
-* *[NPM](https://www.npmjs.com/)*
-* *[Composer](https://getcomposer.org/)*
-* *[Git](https://git-scm.com/)*
-* *[Laravel](https://laravel.com/)*
-* *[Livewire](https://livewire.laravel.com/)*
-* *[Cargo](https://doc.rust-lang.org/cargo/)*
-* **[Tauri](https://tauri.app/)**
-* **[PIP](https://pip.pypa.io/)**
-* **[CMake](https://cmake.org/)**
-* **[JUCE](https://juce.com/)**
-* **[LLVM](https://llvm.org/)**
-
-### Databases
-
-* *[MySQL](https://www.mysql.com/)*
-* **[PostgreSQL](https://www.postgresql.org/)**
-* **[SQLite](https://www.sqlite.org/)**
-* **[Redis](https://redis.io/)**
-
-### Development Operations
-
-* *[GitHub](https://github.com/)*
-* **[Docker](https://www.docker.com/)**
-* **[Kubernetes](https://kubernetes.io/)**
-
-### Cloud
-
-* *[GitHub Pages](https://pages.github.com/)*
-* **[Render](https://render.com/)**
-* **[Netlify](https://www.netlify.com/)**
+- **Working Light / Dark Theme:** Zero-flash script, system preference fallback, persistent choice via `localStorage`, and accessible toggle control.
+- **Accessibility (WCAG 2.2 AA aligned):** Semantic HTML5 landmarks (`<header>`, `<main>`, `<nav>`, `<aside>`, `<footer>`), keyboard navigation, skip-to-content link, high contrast ratios, visible `:focus-visible` rings, and descriptive alternative text for informative assets.
+- **Mobile Responsive:** Seamless responsive navigation drawer with Escape-key dismiss and automatic close on anchor click.
 
 ---
 
-## EDUCATION
+## 💻 Local Development
 
-**Bachelor of Science in Information Technology**  
-Holy Trinity College of General Santos City | 2022 – 2026
+### Prerequisites
+
+- Node.js `>= 22.12.0`
+- npm
+
+### Installation & Execution
+
+```bash
+# Clone repository
+git clone https://github.com/bencariaga/portfolio.git
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Format code with Prettier
+npm run format
+
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+```
 
 ---
 
-## Get in Touch
+## 📂 Repository Structure
 
-Have an interest to hire me as your employee or to do something else with me?  
-Send me an email directly on [Gmail](https://mail.google.com/mail/?view=cm&fs=1&to=bencariaga13@gmail.com) or [Facebook Messenger](https://www.messenger.com/e2ee/t/1387250853134556).
+```txt
+portfolio/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Pages automated deployment workflow
+├── public/
+│   ├── favicon.ico
+│   ├── favicon.svg
+│   ├── fonts/                  # Self-hosted web fonts (WOFF2)
+│   └── images/                 # Project screenshots and authentic portrait
+├── src/
+│   ├── components/
+│   │   ├── Contact.astro       # Verified direct contact links & email
+│   │   ├── Education.astro     # BSIT degree status & TESDA NC II credential
+│   │   ├── Footer.astro        # Accessible footer navigation & copyright
+│   │   ├── Hero.astro          # Professional introduction & calls-to-action
+│   │   ├── Interests.astro     # Subdued secondary creative & systems interests
+│   │   ├── Navbar.astro        # Responsive header with theme toggle & mobile drawer
+│   │   ├── Projects.astro      # Featured projects with roles & verified tech stack
+│   │   └── Skills.astro        # Categorized skills matrix with core highlights
+│   ├── data/
+│   │   └── portfolio.ts        # Single source-of-truth TypeScript definitions & data
+│   ├── layouts/
+│   │   └── Layout.astro        # HTML head metadata, theme script, skip link
+│   ├── pages/
+│   │   ├── Home.astro          # Structured landing view
+│   │   └── index.astro         # Main entry point
+│   └── styles/
+│       ├── global.css          # Design tokens, font faces, scrollbars, focus rings
+│       └── media-queries.css   # Layout safety resets
+├── astro.config.mjs            # Astro configuration with site & base path (/portfolio)
+├── package.json
+└── tsconfig.json
+```
+
+---
+
+## 📬 Contact & Links
+
+- **Email:** [bencariaga13@gmail.com](mailto:bencariaga13@gmail.com)
+- **LinkedIn:** [linkedin.com/in/benhur-cariaga](https://www.linkedin.com/in/benhur-cariaga/)
+- **GitHub:** [github.com/bencariaga](https://github.com/bencariaga)
+- **Portfolio Live:** [https://bencariaga.github.io/portfolio/](https://bencariaga.github.io/portfolio/)
